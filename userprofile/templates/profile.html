@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% include 'navbar.html' %}
+    <section class="bg-gradient-to-br from-[rgba(255,153,51,1)] via-white to-[rgba(19,136,8,1)] relative mt-20 flex justify-center items-center    w-full h-screen overflow-y-hidden">
+        <div class="w-full flex justify-center h-auto">
+            <div class="bg-blue-400/10 border-[1.5px] w-[35%] border-gray-700 p-24 shadow-sm rounded-lg shodow-lg">
+                <div class="flex items-start space-x-2 font-semibold text-gray-900 leading-8">
+                    <svg class="h-8 w-8 mt-1"
+                         xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    <div class="mb-6">
+                        <span class="tracking-wide text-3xl">Your profile</span>
+                    </div>
+                </div>
+                <div class="text-gray-700">
+                    <div class="grid text-lg">
+                        <div class="grid grid-cols-2 border-b border-b-gray-700">
+                            <div class="px-4 text-lg py-2 font-semibold">User name</div>
+                            <div class="px-4 text-lg py-2">{{ user.username }}</div>
+                        </div>
+                        <div class="grid grid-cols-2 border-b border-b-gray-700">
+                            <div class="px-4 text-lg py-2 font-semibold">Email</div>
+                            <div class="px-4 text-lg py-2">{{ user.email }}</div>
+                        </div>
+                        <div class="grid grid-cols-2 border-b border-b-gray-700">
+                            <div class="px-4 text-lg py-2 font-semibold">Marital Status</div>
+                            <div class="px-4 text-lg py-2">{{ user.profile.marital_status }}</div>
+                        </div>
+                        <div class="grid grid-cols-2 border-b border-b-gray-700">
+                            <div class="px-4 text-lg py-2 font-semibold">Income</div>
+                            <div class="px-4 text-lg py-2">{{ user.profile.income_class }}</div>
+                        </div>
+                        <div class="grid grid-cols-2 border-b border-b-gray-700">
+                            <div class="px-4 text-lg py-2 font-semibold">Caste</div>
+                            <div class="px-4 text-lg py-2">{{ user.profile.cast_class }}</div>
+                        </div>
+                        <div class="grid grid-cols-2 border-b border-b-gray-700">
+                            <div class="px-4 text-lg py-2 font-semibold">Age</div>
+                            <div class="px-4 text-lg py-2">{{ user.profile.age }}</div>
+                        </div>
+                        <div class="grid grid-cols-2 border-b border-b-gray-700">
+                            <div class="px-4 text-lg py-2 font-semibold">Education</div>
+                            <div class="px-4 text-lg py-2">
+                            {{ user.profile.education_class }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex mt-10 space-x-10">
+                <button class="w-full text-gray-50 bg-[#4c6fc0] focus:ring-4 focus:outline-none font-semibold rounded-lg text-lg px-5 py-2.5 text-center">
+                    <a href="{% url 'logout' %}">Logout</a>
+                </button>
+                <button class="w-full text-gray-50 bg-[#4c6fc0] focus:ring-4 focus:outline-none font-semibold rounded-lg text-lg px-5 py-2.5 text-center">
+                    <a href="{% url 'update_profile' %}">Edit Profile</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

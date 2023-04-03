@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+    {% include "navbar.html" %}
+    <div class="pc:mt-5 nav:mt-24 mobile:mt-20">
+        <section class="bg-gradient-to-br from-[rgba(255,153,51,1)] via-white to-[rgba(19,136,8,1)]">
+            <div class="flex flex-col items-center mt-0.25 justify-center h-screen nav:h-fit mobile:h-fit">
+                <p class="flex w-full justify-center mt-6 items-center mb-4 text-4xl text-black font-medium">Edit Profile</p>
+                <!-- <div class="flex w-full justify-center items-center">
+                    <p class="flex items-center mb-6 mr-2 text-md text-black font-normal">Already Registered?</p>
+                    <div class="cursor-pointer">
+                        <a href="{% url 'login' %}">
+                            <p class="flex items-center mb-6 underline text-md text-black font-normal">Login</p>
+                        </a>
+                    </div>
+                </div> -->
+                {% component "field_errors" form=form %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="flex mobile:flex-col nav:flex-col mobile:space-y-4 nav:space-y-4 items-center p-4 justify-between">
+                        <div class="flex flex-col space-y-4 pc:mr-24 w-96 mobile:w-72">
+                            {% component "inputfield" label="Username" field=user_form.username form=user_form %}
+                            {% component "inputfield" label="Gender" field=profile_form.gender form=profile_form %}
+                            {% component "inputfield" label="Income" field=profile_form.income_class form=profile_form %}
+                            {% component "inputfield" label="age" field=profile_form.age form=profile_form %}
+                        </div>
+                        <div class="flex flex-col space-y-4 w-96 mobile:w-72">
+                            {% component "inputfield" label="Email" field=user_form.email form=user_form %}
+                            {% component "inputfield" label="Marital Status" field=profile_form.marital_status form=profile_form %}
+                            {% component "inputfield" label="Cast Class" field=profile_form.cast_class form=profile_form %}
+                            {% component "inputfield" label="Education" field=profile_form.education_class form=profile_form %}
+                        </div>
+                    </div>
+                    <div class="mt-6 w-full flex justify-center items-center mb-12">
+                        <button type="submit"
+                                class="pc:w-1/4 mobile:w-1/2 nav:w-1/2 text-gray-50 bg-[#4c6fc0] focus:ring-4 focus:outline-none font-semibold rounded-lg text-lg px-5 py-2.5 text-center">
+                            Update
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+{% endblock content %}

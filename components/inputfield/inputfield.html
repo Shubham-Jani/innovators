@@ -1,0 +1,11 @@
+{% load widget_tweaks %}
+<label class="block mb-2 text-md font-normal text-black">{{ label }}</label>
+{% if field.errors %}
+  {{ field| attr:"class:border-2 border-red-600 text-black rounded-lg focus:ring-primary-600 block w-full p-2.5" }}
+  {% comment %} <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+  <span class="font-medium">Danger alert!</span>
+  {{ field.errors }}
+  </div> {% endcomment %}
+{% else %}
+  {{ field }}
+{% endif %}

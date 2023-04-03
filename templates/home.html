@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% load component_tags %}
+{% block content %}
+  {% include "navbar.html" %}
+  <style>
+  {%load static%}
+
+  body {
+    background: url({% static 'finalbg.jpg' %});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  </style>
+  {% if message %}<script>alert({{message }})</script>{% endif %}
+  <div class="w-full overflow-x-hidden pc:overflow-y-hidden temp:overflow-y-auto h-screen">
+    <form class="flex justify-between items-center pc:ml-10 w-full mt-[23vh] mb-20 h-auto nav:flex-col temp:flex-col mobile:flex-col"
+          method="post"
+          id="voice_form">
+      {% csrf_token %}
+      <div class="flex flex-col nav:justify-center mobile:justify-center nav:w-full mobile:w-full">
+        <div class="w-3/4 nav:w-full mobile:w-full">
+          <p class="nav:text-lg mobile:text-lg text-3xl mb-4 font-semibold text-left nav:text-center mobile:text-center w-3/4 nav:w-full mobile:w-full nav:px-16 mobile:px-12">
+            You can use Akam to learn about Gujarat government schemes for which
+            you qualify, also gives you a list of all government initiatives that
+            are being hurried.
+          </p>
+        </div>
+        <div class="nav:w-full mobile:w-full nav:flex mobile:flex nav:justify-center mobile:justify-center nav:items-center mobile:items-center">
+          <div class="flex mobile:flex-col items-center w-3/4 relative overflow-auto">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 strokeWidth="1.5"
+                 stroke="currentColor"
+                 class="mobile:w-5 mobile:h-5 mobile:left-0 w-6 h-6 ml-2 mobile:mt-1.5 text-white absolute">
+              <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+            <input type="text"
+                   id="voice-search"
+                   class="bg-gray-700 mobile:mb-2 mobile:px-5 border w-3/4 border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 text-white"
+                   placeholder="Type here"
+                   required
+                   name="search"/>
+            <div class="flex">
+              <button onclick="record()"
+                      class="inline-flex items-center px-2.5 py-2 ml-2 text-sm font-semibold text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="1.5"
+                     stroke="currentColor"
+                     class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                </svg>
+              </button>
+              <button type="submit"
+                      id="text-search"
+                      class="inline-flex items-center py-2.5 px-6 ml-2 text-sm font-semibold text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6">
+          <p id="listening" class="text-3xl hidden font-medium text-blue-600">Listening...</p>
+        </div>
+        <script>
+        function record() {
+          if (window.hasOwnProperty("webkitSpeechRecognition")) {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-IN";
+            document.getElementById("voice-search").value = "";
+
+            recognition.onresult = function (event) {
+              console.log(event);
+              document.getElementById("voice-search").value = event.results[0][0].transcript;
+              setTimeout(function () {
+
+                document.getElementById("text-search").click();
+              }, 1000);
+
+            }
+            recognition.start();
+          }
+          else {
+            alert("voice recognition is not supported in your browser please use chrome for this feature!")
+          }
+        }
+        </script>
+      </div>
+      <div class="temp:ml-0 temp:mt-10 mobile:mt-20 flex h-96 items-center justify-center temp:items-center temp:justify-center pc:-ml-[10%] flex-col pc:justify-start w-full p-5 overflow-hidden">
+        <div class="flex h-full items-center w-full temp:justify-center justify-center relative">
+          {% for scheme in new_schemes %}
+            <div id={{ forloop.counter }} class="h-fit absolute transition-all duration-[1000ms] max-w-md temp:max-w-sm mobile:max-w-xs rounded-3xl border border-gray-200 shadow-md bg-gray-700">
+              <div class="p-5">
+                <div class="text-3xl mobile:text-2xl mb-2 text-white font-semibold">{{ scheme.name }}</div>
+                <div class="text-sm mb-4 text-white font-normal">{{ scheme.scheme_info }}</div>
+                <div class="mt-4">
+                  <a href="{% url 'dynamic_scheme' scheme.id %}">
+                    <div class="inline-flex transition-all items-center py-2.5 px-6 ml-2 text-sm font-semibold text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      View more
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <script>
+      let count = 0;
+
+      function trans() {
+        const card1 = document.getElementById("1");
+        const card2 = document.getElementById("2");
+        const card3 = document.getElementById("3");
+
+        if (count == 0) {
+          card3.style.transform = "translateX(100%)";
+          card3.style.opacity = 0;
+
+          card1.style.opacity = 1;
+          card1.style.transform = "translateX(0)";
+          count = (count + 1) % 3;
+        } else if (count == 1) {
+          card1.style.transform = "translateX(100%)";
+          card1.style.opacity = 0;
+
+          card2.style.opacity = 1;
+          card2.style.transform = "translateX(0)";
+          count = (count + 1) % 3;
+        } else {
+          card2.style.transform = "translateX(100%)";
+          card2.style.opacity = 0;
+
+          card3.style.opacity = 1;
+          card3.style.transform = "translateX(0)";
+          count = (count + 1) % 3;
+        }
+      }
+      setInterval(() => {
+        trans();
+      }, 4000);
+      </script>
+    </form>
+    <div class="ml-12 mb-6 mobile:text-center mobile:ml-0 nav:text-center nav:ml-0">
+      <p class="text-3xl nav:text-2xl mobile:text-xl font-semibold text-gray-800">Browse schemes by catagories:</p>
+    </div>
+    <div class="mobile:hidden ml-10 nav:ml-0 mobile:ml-0 mb-24 mt-18 flex w-full items-center justify-start nav:justify-center mobile:justify-center space-x-16">
+      <div class="flex items-center nav:flex-col mobile:flex-col nav:space-y-12 mobile:space-y-10 pc:space-x-16">
+        <div class="max-w-[15rem] max-h-sm rounded-3xl border border-gray-200 shadow-md bg-gray-700">
+          <div class="p-5">
+            <a href="schemes/agriculture/" name="agriculture">
+              <h5 class="mb-2 text-xl mobile:text-lg font-bold tracking-tight text-white">Agriculture</h5>
+            </a>
+            <p class="mb-3 mobile:hidden text-md font-normal text-gray-400">All the schemes related to Agricluture.</p>
+          </div>
+        </div>
+        <div class="max-w-[15rem] max-h-sm rounded-3xl border border-gray-200 shadow-md bg-gray-700">
+          <div class="p-5">
+            <a href="schemes/education/" name="education">
+              <h5 class="mb-2 text-xl mobile:text-lg font-bold tracking-tight text-white">Education</h5>
+            </a>
+            <p class="mb-3 mobile:hidden text-md font-normal text-gray-400">All the schemes related to Education.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center nav:flex-col mobile:flex-col nav:space-y-12 mobile:space-y-10 pc:space-x-16">
+        <div class="max-w-[15rem] max-h-sm rounded-3xl border border-gray-200 shadow-md bg-gray-700">
+          <div class="p-5">
+            <a href="schemes/startup/" name="startup">
+              <h5 class="mb-2 text-xl mobile:text-lg font-semibold tracking-tight text-white">Startup</h5>
+            </a>
+            <p class="mb-3 mobile:hidden text-md font-normal text-gray-400">All the schemes related to Startup.</p>
+          </div>
+        </div>
+        <div class="max-w-[15rem] max-h-sm rounded-3xl border border-gray-200 shadow-md bg-gray-700">
+          <div class="p-5">
+            <a href="schemes/other/" name="other">
+              <h5 class="mb-2 text-xl mobile:text-lg font-extrabold tracking-tight text-white">Others</h5>
+            </a>
+            <p class="mb-3 mobile:hidden text-md font-normal text-gray-400">All the schemes related to others.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden mb-24 mt-18 mobile:flex flex-col space-y-4 w-full items-center justify-center">
+      <div class="rounded-2xl w-1/2 border border-gray-200 shadow-md bg-gray-700">
+        <div class="px-8 py-2">
+          <a href="schemes/agriculture/" name="agriculture">
+            <h5 class="mb-2 text-xl text-center mobile:text-lg font-bold tracking-tight text-white">Agriculture</h5>
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl w-1/2 border border-gray-200 shadow-md bg-gray-700">
+        <div class="px-8 py-2">
+          <a href="schemes/education/" name="education">
+            <h5 class="mb-2 text-xl text-center mobile:text-lg font-bold tracking-tight text-white">Education</h5>
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl w-1/2 border border-gray-200 shadow-md bg-gray-700">
+        <div class="px-8 py-2">
+          <a href="schemes/startup/" name="startup">
+            <h5 class="mb-2 text-xl text-center mobile:text-lg font-bold tracking-tight text-white">Startup</h5>
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl w-1/2 border border-gray-200 shadow-md bg-gray-700">
+        <div class="px-8 py-2">
+          <a href="schemes/other/" name="other">
+            <h5 class="mb-2 text-xl text-center mobile:text-lg font-bold tracking-tight text-white">Others</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

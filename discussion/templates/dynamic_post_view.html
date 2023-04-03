@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% include 'navbar.html' %}
+    <!-- <section class="bg-gradient-to-br from-[rgba(255,153,51,1)] via-white to-[rgba(19,136,8,1)] fixed mt-12 flex justify-center w-full h-fit overflow-y-hidden">
+  yay
+</section> -->
+    <script>
+    let isModelHidden = true;
+    let isScreenBlack = false;
+    function showModel() {
+        const model = document.getElementById("authentication-modal");
+        if (isModelHidden) {
+            model.style.display = "flex";
+            isModelHidden = false;
+            // showBlackScreen();
+        } else {
+            model.style.display = "none";
+            isModelHidden = true;
+            // showBlackScreen();
+        }
+    }
+    function showBlackScreen() {
+        const scr = document.getElementById("black");
+        if (!isScreenBlack) {
+            scr.style.display = "flex";
+            isScreenBlack = true;
+        } else {
+            scr.style.display = "none";
+            isScreenBlack = false;
+        }
+    }
+    </script>
+    <section id="black"
+             class="absolute w-full z-[30] h-screen bg-black opacity-50"
+             style="display: none">
+    </section>
+    <section class="w-full h-screen flex flex-col justify-center items-center bg-gradient-to-br from-[rgba(255,153,51,1)] via-white to-[rgba(19,136,8,1)] mt-12 fixed">
+        <div class="flex items-center fixed w-full h-3/4 flex-col">
+            <div class="w-[50%] bg-gray-50 h-auto rounded-xl shadow-xl mb-2 pb-2 overflow-y-auto">
+                <div class="mx-6 space-y-4 ">
+                    <div class="flex space-x-2 mt-6">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke-width="1.5"
+                             stroke="currentColor"
+                             class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <p class="font-bold font-lg">{{ post.user.username }}</p>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <p class="font-normal text-3xl">{{ post.title }}</p>
+                        <div class="w-full temp:w-full text-justify ">
+                            <p class="font-normal text-lg">{{ post.description }}</p>
+                        </div>
+                    </div>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="flex flex-col">
+                            {{ form.description }}
+                            <div class="flex w-[95%] mt-2 justify-between">
+                                <div></div>
+                                <button type="submit"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2.5 py-1 text-center">
+                                    Comment
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    {% for reply in post.reply_set.all %}
+                        <div class="ml-4 mr-8 space-y-1 mt-4 mb-4 border rounded-md p-4 shadow-lg border-b-gray-800 ">
+                            <div class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
+                                     viewBox="0 0 24 24"
+                                     stroke-width="1.5"
+                                     stroke="currentColor"
+                                     class="w-6 h-6 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <p class="font-bold font-lg">{{ reply.user.username }}</p>
+                            </div>
+                            <p class="font-normal text-lg">{{ reply.description }}</p>
+                            <div class="flex w-full justify-between">
+                                <div></div>
+                                {% if reply.user == request.user %}
+                                    <form action="{% url 'delete_reply' reply.id %} ">
+                                        <button type="submit"
+                                                class="text-red-600 border border-red-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-2.5 py-1 text-center">
+                                            Delete
+                                        </button>
+                                    </form>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- 2nd -->
+        </section>
+    {% endblock content %}

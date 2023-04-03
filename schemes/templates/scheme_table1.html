@@ -1,0 +1,139 @@
+<section
+  class="bg-gradient-to-br from-[rgba(255,153,51,1)] via-white to-[rgba(19,136,8,1)] fixed mt-12 flex justify-center w-full h-fit overflow-y-hidden"
+>
+  <div class="mt-20 w-3/4 flex flex-col h-screen">
+    <div class="overflow-y-auto h-3/4 rounded-lg shadow-2xl">
+      <table class="relative w-full text-sm text-left text-gray-200">
+        <thead>
+          <tr>
+            <th
+              class="sticky top-0 py-3 px-6 bg-blue-600 text-md text-white uppercase"
+            >
+              No.
+            </th>
+            <th
+              class="sticky top-0 py-3 px-6 bg-blue-600 text-md text-white uppercase"
+            >
+              Catagory
+            </th>
+            <th
+              class="sticky top-0 py-3 px-6 bg-blue-600 text-md text-white uppercase"
+            >
+              Schemes
+            </th>
+            <th
+              class="sticky top-0 py-3 px-6 bg-blue-600 text-md text-white uppercase"
+            >
+              Scheme info
+            </th>
+            <th
+              class="sticky top-0 py-3 px-36 bg-blue-600 text-md text-white uppercase"
+            >
+              Dates
+            </th>
+            <th
+              class="sticky top-0 py-3 px-6 bg-blue-600 text-md text-white uppercase"
+            >
+              Website
+            </th>
+            <th
+              class="sticky top-0 py-3 px-20 bg-blue-600 text-md text-white uppercase"
+            >
+              <!-- More details -->
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for scheme in schemes %} {% if forloop.counter|divisibleby:"2" %}
+          <tr class="border-b bg-blue-200">
+            {% else %}
+          </tr>
+
+          <tr class="border-b bg-blue-300">
+            {% endif %}
+            <th
+              scope="row"
+              class="py-4 px-6 font-medium text-gray-800 whitespace-nowrap"
+            >
+              {{ forloop.counter }}
+            </th>
+            <td class="py-4 px-6 font-semibold cursor-pointer text-gray-800">
+              <ul>
+                {% for catagory in scheme.catagories_set.all %}
+                <li>{{ catagory.catagory }}</li>
+                {% endfor %}
+              </ul>
+            </td>
+            <td class="py-4 px-6 cursor-pointer font-bold text-gray-800">
+              <a
+                href="{% url 'dynamic_scheme' scheme.id %}"
+                class=""
+                >{{ scheme.name }}</a
+              >
+            </td>
+            <td class="py-4 px-6 cursor-pointer text-gray-800">
+              {{ scheme.scheme_info }}
+            </td>
+            <td class="py-4 px-6 cursor-pointer text-gray-800">
+              <ul>
+                <div class="flex ml-12 w-full justify-start items-center">
+                  <div class="mr-1">
+                    <p class="font-bold">Start date:</p>
+                  </div>
+                  <li>{{scheme.start_date}}</li>
+                </div>
+
+                <div class="flex ml-12 w-full justify-start items-center">
+                  <div class="mr-1">
+                    <p class="font-bold">End date:</p>
+                  </div>
+                  <li>{{scheme.last_date}}</li>
+                </div>
+              </ul>
+            </td>
+            <td class="py-4 px-6 cursor-pointer text-gray-800">
+              {% if scheme.is_past_due %}
+              <a>
+                <div class="mt-5">
+                  <button
+                    class="w-auto text-gray-50 transition-all duration-[250ms] bg-blue-600 opacity-50 focus:outline-none font-normal rounded-lg text-sm px-4 py-2 text-center"
+                  >
+                    Apply
+                  </button>
+                  <div class="flex w-full mt-1 justify-center items-center">
+                    <p class="text-red-600 font-bold text-xs">Expired</p>
+                  </div>
+                </div>
+              </a>
+              {% else %}
+              <a href="{{scheme.link}}">
+                <button
+                  class="w-auto text-gray-50 transition-all duration-[250ms] bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none font-normal rounded-lg text-sm px-4 py-2 text-center"
+                >
+                  Apply
+                </button>
+                <!-- <p class="mt-2 text-xs text-blue-700">View more</p> -->
+              </a>
+              {% endif %}
+            </td>
+            <td class="py-4 px-6 cursor-pointer text-gray-800">
+              <div class="flex items-center h-auto justify-center w-full">
+                <!-- <button
+                class="w-auto text-gray-50 transition-all duration-[250ms] bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none font-normal rounded-lg text-sm px-4 py-2 text-center"
+              > -->
+              <a
+                href="{% url 'dynamic_scheme' scheme.id %}"
+                class="text-blue-700 underline"
+                >View more</a
+              >
+                
+              <!-- </button> -->
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

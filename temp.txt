@@ -1,0 +1,62 @@
+<div class="flex items-center w-3/4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 ml-2 text-white absolute"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          />
+        </svg>
+        <input
+          type="text"
+          id="voice-search"
+          class="bg-gray-700 border w-3/4 border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 text-white"
+          placeholder="Type here"
+          required
+          name="search"
+        />
+        <button
+          type="submit"
+          id="text-search"
+          class="inline-flex items-center py-2.5 px-6 ml-2 text-sm font-semibold text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Search
+        </button>
+        <button
+        onclick="record()"
+          class="inline-flex items-center px-2.5 py-2 ml-2 text-sm font-semibold text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+        </svg>
+        
+        </button>
+      </div>
+      <div class="mt-6">
+        <p id="listening" class="text-3xl hidden font-medium text-blue-600">Listening...</p>
+      </div>
+        <script>
+            function record(){
+                var recognition = new webkitSpeechRecognition();
+                recognition.lang =  "en-IN";
+                document.getElementById("voice-search").value = "";
+
+                recognition.onresult = function(event){
+                    console.log(event);
+                    document.getElementById("voice-search").value = event.results[0][0].transcript;
+                    setTimeout(function(){ 
+
+                        document.getElementById("text-search").click();
+                    }, 1000);  
+                    
+                }
+                recognition.start();
+            }
+        </script>
+    </div>

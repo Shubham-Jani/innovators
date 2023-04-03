@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% block content %}
+  {% include "navbar.html" %}
+  {% load custom_tags %}
+  <script>
+  var isPlaying = false;
+  function pp() {
+    var id = document.getElementById("player");
+    if (isPlaying == true) {
+      id.pause();
+      isPlaying = false;
+    } else {
+      id.play();
+      isPlaying = true;
+      id.volume = 1.0;
+    }
+  }
+  </script>
+  <div class="flex justify-center w-full bg-gradient-to-br from-[rgba(255,153,51,1)] via-white to-[rgba(19,136,8,1)] h-fit">
+    <div class="mt-36 w-full flex flex-col justify-start items-center">
+      <div class="mb-6">
+        <p class="text-center text-5xl font-[575]">{{ scheme.name }}</p>
+      </div>
+      <div class="mb-12 border-[1.5px] border-b-gray-800 border-t-transparent border-r-transparent border-l-transparent p-10 rounded-md w-3/4">
+        <p class="text-center text-xl" name="scheme_info" id="schemee_info">{{ scheme.scheme_info }}</p>
+        {% load gTTS %}
+        <audio src="{% say 'en-in' hi_data %}" class="hidden" id="player" controls></audio>
+        <div class="w-full flex justify-center cursor-pointer mt-6">
+          <div class="text-white rounded-xl bg-blue-400 w-auto flex justify-center items-center ease-in-out px-4 py-2 font-normal text-base transition-all duration-[250ms] hover:bg-blue-700 hover:rounded-xl hover:text-white"
+               onclick="pp()">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke-width="1.5"
+                 stroke="currentColor"
+                 class="w-6 h-6 mr-2">
+              <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"
+              />
+            </svg>
+            <p class="cursor-pointer text-lg font-semibold">हिन्दी</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-3/4 h-auto flex flex-col justify-evenly items-center border-t-transparent border-r-transparent border-l-transparent border-b-gray-800 border-[1.5px] mb-12 pb-4">
+        <div class="w-1/2 flex flex-col justify-center items-center">
+          <div class="-mt-8 mb-4 flex justify-center w-full items-center">
+            <p class="text-3xl font-semibold">Scheme's availability and official website</p>
+          </div>
+          <div class="flex w-3/4 justify-around">
+            <div class="w-1/2 flex flex-col justify-center items-start">
+              <div class="flex">
+                <p class="text-lg font-semibold mr-1">Start date :</p>
+                <p class="text-lg">{{ scheme.start_date }}</p>
+              </div>
+              <div class="flex">
+                <p class="text-lg font-semibold mr-1">End date :</p>
+                <p class="text-lg">{{ scheme.last_date }}</p>
+              </div>
+            </div>
+            <div class="w-1/2 flex flex-col">
+              <a target="_blank"
+                 href="{{ scheme.link }}"
+                 class="text-blue-600 underline text-xl mb-1">Link to official website</a
+                >
+                {% if validity == "expired" %}
+                  <p class="text-lg text-left font-semibold text-red-600">The scheme has been expired</p>
+                {% else %}
+                  <p class="text-lg text-left font-semibold text-green-600">The scheme can be availed</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between w-3/4 space-x-40">
+          <div class="w-full h-auto">
+            <div class="mb-10">
+              <p class="text-4xl text-center">Eligibility critria</p>
+            </div>
+            <div class="rounded-lg border shadow-2xl">
+              <table class="relative w-full border text-sm text-left text-black">
+                <thead class="text-white">
+                  <tr>
+                    <th class="sticky top-0 py-3 px-6 bg-blue-600 text-md">Type</th>
+                    <th class="sticky top-0 py-3 px-6 bg-blue-600 text-md">Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b bg-blue-200">
+                    <th scope="row" class="py-4 px-6 font-medium">Age</th>
+                    <td class="py-4 px-6">{{ scheme.age }}</td>
+                  </tr>
+                  <tr class="border-b bg-blue-300">
+                    <th scope="row" class="py-4 px-6 font-medium">Marital status</th>
+                    <td class="py-4 px-6">{{ scheme.marital_status }}</td>
+                  </tr>
+                  <tr class="border-b bg-blue-200">
+                    <th scope="row" class="py-4 px-6 font-medium">Income</th>
+                    <td class="py-4 px-6">
+                      <ul>
+                        {% for income in scheme.incomes_set.all %}<li>{{ income.income }}</li>{% endfor %}
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="border-b bg-blue-300">
+                    <th scope="row" class="py-4 px-6 font-medium">Education</th>
+                    <td class="py-4 px-6">
+                      <ul>
+                        {% for education in scheme.educations_set.all %}<li>{{ education.education }}</li>{% endfor %}
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="border-b bg-blue-200">
+                    <th scope="row" class="py-4 px-6 font-medium">Caste</th>
+                    <td class="py-4 px-6">
+                      <ul>
+                        {% for caste in scheme.castes_set.all %}<li>{{ caste.caste }}</li>{% endfor %}
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="border-b bg-blue-300">
+                    <th scope="row" class="py-4 px-6 font-medium">Gender</th>
+                    <td class="py-4 px-6">
+                      <ul>
+                        {% for gender in scheme.genders_set.all %}<li>{{ gender.gender }}</li>{% endfor %}
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="border-b bg-blue-300">
+                    <th scope="row" class="py-4 px-6 font-medium">Last Date</th>
+                    <td class="py-4 px-6">
+                      {{ scheme.last_date }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="w-full h-auto">
+            <div class="mb-10">
+              <p class="text-4xl text-center">
+                Documents needed
+              </p>
+            </div>
+            <div class="rounded-lg border shadow-2xl">
+              <table class="relative w-full border text-sm text-left text-black">
+                <thead>
+                  <tr>
+                    <th class="sticky top-0 py-3 px-6 bg-blue-600 text-xs text-white uppercase">
+                      Documents
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for document in scheme.documents_set.all %}
+                    {% if forloop.counter|divisibleby:"2" %}
+                      <tr class="border-b bg-blue-200">
+                        <th scope="row" class="py-4 px-6 font-medium">
+                          {{ document.document }}
+                        </th>
+                      </tr>
+                    {% else %}
+                      <tr class="border-b bg-blue-300">
+                        <th scope="row" class="py-4 px-6 font-medium">
+                          {{ document.document }}
+                        </th>
+                      </tr>
+                    {% endif %}
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="w-3/4 mt-12 h-fit py-12 flex flex-col justify-start items-center border-t-gray-800 border-r-transparent border-l-transparent border-b-gray-800 border-[1.5px] mb-12">
+          <p class="text-2xl font-medium mb-4">
+            YouTube video for details of this scheme.
+          </p>
+          <iframe src="https://www.youtube.com/embed/yaFzfzyIP2I"
+                  height="400"
+                  width="600"
+                  frameborder="0"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  {% endblock content %}

@@ -1,0 +1,176 @@
+<div class="h-full transition-all pc:-translate-x-full -translate-x-full z-[999] fixed mobile:top-[7.5rem] nav:top-[8.5rem] bg-gray-900 mobile:w-1/2 nav:w-80"
+     id="sidebar">
+  <div class="w-full mt-10 flex flex-col jutsify-center items-center">
+    <div class="mobile:text-sm rounded-md w-full flex justify-center items-center text-white border-none font-normal text-base px-4 mobile:py-4 nav:py-2">
+      <p class="cursor-pointer">
+        <a href="{% url 'home' %}">Home</a>
+      </p>
+    </div>
+    <div class="mobile:text-sm rounded-md w-full flex justify-center items-center text-white border-none font-normal text-base px-4 mobile:py-4 nav:py-2">
+      <p class="cursor-pointer">
+        <a href="{% url 'all_schemes' %}">All Schemes</a>
+      </p>
+    </div>
+    <div class="mobile:text-sm rounded-md w-full flex justify-center items-center text-white border-none font-normal text-base px-4 mobile:py-4 nav:py-2">
+      <p class="cursor-pointer">
+        <a href="{% url 'user_schemes' %}">Check Eligibility</a>
+      </p>
+    </div>
+    <div class="mobile:text-sm rounded-md w-full flex justify-center items-center text-white border-none font-normal text-base px-4 mobile:py-4 nav:py-2">
+      <p class="cursor-pointer">
+        <a href=" {% url "discussion_home" %}">Discussion</a>
+      </p>
+    </div>
+    {% if user.is_authenticated %}
+      <div class="mobile:text-sm rounded-md w-full flex justify-center items-center text-white border-none font-normal text-base px-4 mobile:py-4 nav:py-2">
+        <p class="cursor-pointer">
+          <a href="{% url 'profile' %}">{{ user.username }}</a>
+        </p>
+      </div>
+    {% else %}
+      <div class="mobile:text-sm rounded-md w-full flex justify-center items-center text-white border-none font-normal text-base px-4 mobile:py-4 nav:py-2">
+        <p class="cursor-pointer">
+          <a href="{% url 'login' %}">Login/Register</a>
+        </p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+<!-- {/* end sidebar for ipad & mobile view */}
+    {/* start desktop view */} -->
+<div class="nav:hidden mobile:hidden">
+  <div id="pc-nav"
+       class="w-full top-10 z-[999] fixed h-16 p-10 bg-gray-50 text-white shadow-md flex justify-between items-center">
+    {% load static %}
+    <a href="{% url 'about_us' %}">
+      <img src="{% static 'trans_logo.png' %}" alt="LOGO" height="69" width="69" />
+    </a>
+    <div class="space-x-10 flex">
+      <div class="space-x-4 flex">
+        <div class="text-black ease-in-out px-4 py-2 font-normal text-base transition-all duration-[250ms] hover:bg-[#1048ffb6] hover:rounded-xl hover:text-white">
+          <p class="cursor-pointer">
+            <a href="{% url 'home' %}">Home</a>
+          </p>
+        </div>
+        <div class="text-black ease-in-out px-4 py-2 font-normal text-base transition-all duration-[250ms] hover:bg-[#1048ffb6] hover:rounded-xl hover:text-white">
+          <p class="cursor-pointer">
+            <a href="{% url 'all_schemes' %}">All Schemes</a>
+          </p>
+        </div>
+        <div class="text-black ease-in-out px-4 py-2 font-normal text-base transition-all duration-[250ms] hover:bg-[#1048ffb6] hover:rounded-xl hover:text-white">
+          <p class="cursor-pointer">
+            <a href=" {% url "discussion_home" %}">Discussion</a>
+          </p>
+        </div>
+        <div class="text-black ease-in-out px-4 py-2 font-normal text-base transition-all duration-[250ms] hover:bg-[#1048ffb6] hover:rounded-xl hover:text-white">
+          <p class="cursor-pointer">
+            <a href="{% url 'user_schemes' %}">Check Eligibility</a>
+          </p>
+        </div>
+        {% comment %}
+        <div class="text-black ease-in-out px-4 py-2 font-normal text-base transition-all duration-[250ms] hover:bg-[#1048ffb6] hover:rounded-xl hover:text-white">
+          <p class="cursor-pointer">Contact us</p>
+        </div>
+        {% endcomment %}
+        {% if user.is_authenticated %}
+          <div class="text-black ease-in-out px-4 py-2 font-normal text-base transition-all duration-[250ms] hover:border-[#1048ffb6] border-2 border-gray-50 hover:rounded-xl">
+            <p class="cursor-pointer flex">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke-width="1.5"
+                   stroke="currentColor"
+                   class="w-6 h-6 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <a href="{% url 'profile' %}">{{ user.username }}</a>
+            </p>
+          </div>
+        {% else %}
+          <div class="text-black ease-in-out px-4 py-2 font-normal text-base transition-all duration-[250ms] hover:bg-[#1048ffb6] hover:rounded-xl hover:text-white">
+            <p class="cursor-pointer">
+              <a href="{% url 'login' %}">Login / Register</a>
+            </p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="mt-12" id="hideGtts">
+      <div id="google_element"></div>
+    </div>
+  </div>
+  <div class="fixed -top-[0.4rem] left-[50%]" id="hideGtts">
+    <div id="google_element"></div>
+  </div>
+  <script>
+    var isChromium = window.chrome;
+    var winNav = window.navigator;
+    var vendorName = winNav.vendor;
+    var isOpera = typeof window.opr !== "undefined";
+    var isIEedge = winNav.userAgent.indexOf("Edg") > -1;
+    var isIOSChrome = winNav.userAgent.match("CriOS");
+    function myFun() {
+      // document.getElementById("pc-nav").classList.add("top-0")
+    }
+    function myFun2() {
+      document.getElementById("hideGtts").classList.add("hidden");
+    }
+    if (
+      isChromium !== null &&
+      typeof isChromium !== "undefined" &&
+      vendorName === "Google Inc." &&
+      isOpera === false &&
+      isIEedge === false
+    ) {
+      console.log("chrome");
+      myFun();
+    } else {
+      console.log("not chrome");
+      myFun2()
+    }
+  </script>
+</div>
+<!-- {/* end desktop view  */}
+{/* start ipad view */} -->
+<script>
+  const toggleSidebar = () => {
+    document.getElementById("sidebar").classList.toggle("-translate-x-full");
+  };
+</script>
+<div class="nav:flex hidden">
+  <div class="w-full top-10 z-50 fixed h-24 p-10 bg-white text-black shadow-md flex justify-between items-center">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         fill="none"
+         viewBox="0 0 24 24"
+         strokeWidth="{1.5}"
+         stroke="currentColor"
+         class="w-8 h-8"
+         onclick="toggleSidebar()">
+      <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
+    </svg>
+    <img src="{% static 'trans_logo.png' %}" alt="LOGO" height="69" width="69" />
+  </div>
+</div>
+{% comment %} {/* end ipad view */} {/* start mobile view */} {% endcomment %}
+<div class="mobile:flex hidden">
+  <div class="w-full top-10 z-50 fixed h-10 p-10 bg-gray-50 text-black shadow-md flex justify-between items-center">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         fill="none"
+         viewBox="0 0 24 24"
+         strokeWidth="{1.5}"
+         stroke="currentColor"
+         class="w-8 h-8"
+         onClick="toggleSidebar()">
+      <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
+    </svg>
+    <img src="{% static 'trans_logo.png' %}" alt="LOGO" height="69" width="69" />
+  </div>
+</div>

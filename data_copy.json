@@ -1,0 +1,1537 @@
+[
+{
+    "model": "schemes.scheme",
+    "pk": 1,
+    "fields": {
+        "name": "Sardar Patel Awas Yojana",
+        "scheme_info": "Sardar Patel Awas Yojana for land less agricultural labours and village artisan living Below Poverty Line in rural areas of the State. Sardar Awas Vajahat, Rampun, dist. Vadodara Govt. has made strategic planning for solution of houses in the village. The poor has right to live new life and to turn to new culture as colony of poor population.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://panchayat.gujarat.gov.in/en/Sardar-Patel-Awas-Yojana",
+        "start_date": "2022-09-05",
+        "last_date": "2022-11-10"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 2,
+    "fields": {
+        "name": "Bal Sakha yojana",
+        "scheme_info": "Under this scheme, all babies born to BPL mothers in the State (approximately 3,00,000 births per annum) will be covered for neonatal care by partnering pediatricians, including care in their Neonatal Intensive Care Unit (level 2 ) at no cost to the beneficiary. After initialization and stabilization of the Scheme, the Scheme may be extended to cover all infants upto one year age.Up to October -09 284 private pediatricians are enrolled and 31151 new bron attended under Bal Sakha yojana",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "https://nhm.gujarat.gov.in/bal-sakha-yojana.htm",
+        "start_date": "2022-10-25",
+        "last_date": "2023-01-12"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 3,
+    "fields": {
+        "name": "Mukhyamantri Amrutum (MA) Yojana",
+        "scheme_info": "A large number of households are pushed into poverty as a result of high costs of household spending on health care. The Below Poverty Line (BPL) population is especially vulnerable to the catastrophic health risks. To address this key vulnerability faced by the BPL population in the Gujarat, the State Government has launched a medical care scheme called Mukhyamantri Amrutum (MA) Yojana. The objective of the scheme is to improve access of BPL families to quality medical and surgical care for the",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "http://www.magujarat.com/",
+        "start_date": "2022-07-04",
+        "last_date": "2022-09-07"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 4,
+    "fields": {
+        "name": "School Health Programme (SHP)",
+        "scheme_info": "School Health Programme (SHP) is a single, largest time framed health programme operating in the State of Gujarat since 1997.",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "https://shp.guj.nic.in/Home.aspx",
+        "start_date": "2022-07-04",
+        "last_date": "2022-09-19"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 5,
+    "fields": {
+        "name": "Beti Bachao Beti Padhao Scheme",
+        "scheme_info": "Beti Bachao Beti Padhao Scheme    Launched on 22nd January 2015 by the Prime Minister of India     in Haryana, the Beti Bachao Beti Padhao Scheme ensures survival,    protection and education of girl children. The scheme aims to     address issues of the declining sex ratio over the past few years,    create social awareness and enhance the efficiency of welfare    services developed for girls.",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "https://betivadhaao.gujarat.gov.in/",
+        "start_date": "2022-07-10",
+        "last_date": "2022-09-20"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 6,
+    "fields": {
+        "name": "One Stop Centre Scheme",
+        "scheme_info": "One Stop Centre Scheme Next in the list of women empowerment schemes in India comes One Stop Centre Scheme. It is a centrally sponsored scheme and is funded through the Nirbhaya fund. State governments receive 100 percecnt central assistance to protect women affected by violence (gender-based such as acid attacks,rape, and sexual harassment) in public and private spaces. This scheme facilitates emergency (medical), legal aid and counselling,.",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "https://wcd.nic.in/schemes/one-stop-centre-scheme-1",
+        "start_date": "2022-09-05",
+        "last_date": "2022-11-10"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 8,
+    "fields": {
+        "name": "Mahila E-Haat",
+        "scheme_info": "Mahila E-Haat is an initiative launched by the Ministry of Women and Child Development. It is one of the women empowerment schemes in India which provides an opportunity for women entrepreneurs for using technology and presents their products (made/manufactured /sold) on an online platform. With only mobile and internet connections, women entrepreneurs can showcase their products along with descriptions and photographs. Here, buyers can also reach sellers telephonically, physically, through emai",
+        "marital_status": "married",
+        "age": "0-18",
+        "link": "http://wwww.bing.com",
+        "start_date": "2022-09-05",
+        "last_date": "2022-10-28"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 9,
+    "fields": {
+        "name": "Working Women Hostel",
+        "scheme_info": "To promote safe accommodation and environment for working women \r\nand provide daycare facilities for their children, the Government \r\nof India has introduced the ‘Working Women Hostel Scheme’. \r\nThrough this women empowerment scheme, the Government provides \r\ngrant-in-aid for construction and new hostel buildings and \r\nextension of an existing building in rented premises.",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "http://www.notyet.com",
+        "start_date": "2022-10-25",
+        "last_date": "2022-11-25"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 10,
+    "fields": {
+        "name": "SWADHAR Greh",
+        "scheme_info": "SWADHAR Greh, one of the Government schemes for women's \r\nempowerment in India, aims to provide shelter, food, clothing, \r\nsocial, economic and health security. This scheme provides legal \r\nassistance to women and helps them take initiative for \r\nreadjusting in societies.",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "http://www.google.com",
+        "start_date": "2022-07-03",
+        "last_date": "2022-09-20"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 17,
+    "fields": {
+        "name": "CBSE single girl child scholarship",
+        "scheme_info": "CBSE single girl child scholarship 2020-21 is one of the popular schemes to offer a scholarship to a single girl child. This scholarship scheme aims to cover a girl child’s education who have passed standard 10 with 60% marks and continuing further education of standard 11th and 12th. This CBSE scholarship for single girl child recognizes a parent’s efforts to promote education and encourage meritorious single girl students among girls.",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "http://www.nowhere.com",
+        "start_date": "2022-10-08",
+        "last_date": "2022-10-08"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 18,
+    "fields": {
+        "name": "Foreign Studies Scheme",
+        "scheme_info": "Foreign Studies Scheme (Loans upto Rs. 15 lakh)- GUEEDC will also provide educational loans upto Rs. 15 lakh at 4% interest rate to candidates who wants to pursue higher studies in foreign countries. For this, candidates must have secured at-least 60% marks in 12th class and annual family must be less than Rs. 4.5 lakh p.a.",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "https://gueedc.gujarat.gov.in/foreign-education-scheme.html",
+        "start_date": "2022-11-07",
+        "last_date": "2023-01-12"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 19,
+    "fields": {
+        "name": "Tuition Assistance Scheme",
+        "scheme_info": "Tuition Assistance Scheme (Rs. 15,000 p.m)- All the meritorious students of Class 10th who have secured more than 70% marks and are studying in Science stream in Class 11th and 12th will get Rs. 15,000 p.m. This assistance will be given as tuition fees from the corporation. This will be also known as Tuition Sahayata Scheme.",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "https://gueedc.gujarat.gov.in/Tution-Help-Scheme.html",
+        "start_date": "2022-08-07",
+        "last_date": "2022-11-16"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 20,
+    "fields": {
+        "name": "Food Bill Scheme",
+        "scheme_info": "Private Hostel Students to Get Monthly Assistance (Rs. 1200 p.m) - All the unreserved category students who are staying in private hostels and whose family income is less than Rs. 3 lakh p.a can get monthly assistance of Rs. 1,200 for 10 months in an year.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://gueedc.gujarat.gov.in/food-bill-scheme.html",
+        "start_date": "2022-05-09",
+        "last_date": "2022-08-16"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 21,
+    "fields": {
+        "name": "Self Employment Loan Scheme",
+        "scheme_info": "Under this scheme the state govt. is focusing on creation of selt-employment oppoutunites. Anyone who wants to start thier own business get loan of 10 Lakh at 5% interest rate and for women 4% interest rate.",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "https://gueedc.gujarat.gov.in/self-employment-scheme-1.html",
+        "start_date": "2022-09-04",
+        "last_date": "2022-10-29"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 22,
+    "fields": {
+        "name": "AGR2(Farm Mechanization)scheme of farmars",
+        "scheme_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "https://ikhedut.gujarat.gov.in/",
+        "start_date": "2022-09-12",
+        "last_date": "2022-12-15"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 23,
+    "fields": {
+        "name": "AGR3 Distribution of Seeds and Fertilizer at Subsidies to Adivasi farmers in Tribal Area",
+        "scheme_info": "The Govt is trying get the higher production of the agriculture crops of the farmers belonging to scheduled tirbes.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://ikhedut.gujarat.gov.in/Public/frm_Public_Contacts.aspx",
+        "start_date": "2022-09-04",
+        "last_date": "2022-10-26"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 24,
+    "fields": {
+        "name": "Agriculture Skill Development Traning Programme for Women Farmers",
+        "scheme_info": "This Scheme sanctioned under gender audit programme for more production varieties and traning eduction programes for womens farmers.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://agri.gujarat.gov.in/agricultural-skill-development-program.htm",
+        "start_date": "2022-08-07",
+        "last_date": "2022-09-30"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 25,
+    "fields": {
+        "name": "Mushroom Cultivation: Production unit",
+        "scheme_info": "One time subsidy/beneficiary area limited to 2ha. 100% to public sector of 40% to private sector unit cost Rs. 20 lakh unit",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://ikhedut.gujarat.gov.in/Public/frm_Public_Contacts.aspx",
+        "start_date": "2022-10-03",
+        "last_date": "2022-10-27"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 26,
+    "fields": {
+        "name": "Assistance for Engergy and Water conservation and Environment compliance",
+        "scheme_info": "Assistance of 20% of cost of machinery and equipment max up to Rs. 30 lakh which will be applicable separately in each case of Energy Conservation, Water Conservation etc for 50% of free paid towards Energy unit.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://www.gsa.gov/real-estate/environmental-programs/energy-and-water-conservation-overview",
+        "start_date": "2022-10-02",
+        "last_date": "2022-11-16"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 27,
+    "fields": {
+        "name": "Assistance for technology acquisition and upgradtion",
+        "scheme_info": "Govt. has notified the scheme for TAAU to provide a funding support to MSME for the acqusition and development of clean and green tehnology.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://msme.gov.in/technology-upgradation-and-quality-certification",
+        "start_date": "2022-10-19",
+        "last_date": "2023-01-02"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 28,
+    "fields": {
+        "name": "Raw Material Assistance Scheme",
+        "scheme_info": "RMA aim is to helping MSME by finanical support for purchasing of raw material and this gives opportunity for MSME's to focus on good and better quality manufacture of Raw materials support upto 180 days",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://www.nsic.co.in/schemes/raw-material-against-bg.aspx",
+        "start_date": "2022-10-20",
+        "last_date": "2022-12-15"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 29,
+    "fields": {
+        "name": "Pradhan Mantri Mudra Yojana",
+        "scheme_info": "PM launched PMMY in 2015 is to develop Micro unit by giving loan and funding to MSME with Low intretest",
+        "marital_status": "any",
+        "age": "0-18",
+        "link": "https://www.mudra.org.in/",
+        "start_date": "2022-08-09",
+        "last_date": "2022-11-22"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 30,
+    "fields": {
+        "name": "Startup India Seed Fund Scheme",
+        "scheme_info": "Main aim ois to provde funding asset to startup of an enterprise, and the funding from angel investors and venture captial firm become avaliable to startup entreprenueurs only after the good and better proof concept that can be provided.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://seedfund.startupindia.gov.in/",
+        "start_date": "2022-09-14",
+        "last_date": "2022-12-02"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 31,
+    "fields": {
+        "name": "Coaching Assistance for 12th Class Students (Rs. 20,000 p.a)",
+        "scheme_info": "All the students of Science Stream of Class 12th can avail coaching assistance of upto Rs. 20,000 per year. This assistance would be given for the preparation of Entrance Exams like NEET and JEE.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://gueedc.gujarat.gov.in/Training-Scheme-for-Competetive-Exams.html",
+        "start_date": "2022-07-03",
+        "last_date": "2022-09-22"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 32,
+    "fields": {
+        "name": "Coaching Assistance for Graduate Students (Rs. 20,000 p.a)",
+        "scheme_info": "emptyStudents of general category who have passed their graduation degree and wants to appear for competitive exams can avail this scheme. For UPSC and other exams, the corporation will provide Rs. 20,000 towards coaching fees, selected institution for the recruitment examinations of Goun Seva Selection Board, Panchayat Seva Selection Board and Government of India Railways, Banks etc. (D.B.T.) will be eligible.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://gueedc.gujarat.gov.in/Training-Scheme-for-Competetive-Exams.html",
+        "start_date": "2022-07-04",
+        "last_date": "2022-09-14"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 33,
+    "fields": {
+        "name": "Loans for Doctors and Advocates (Rs. 10 lakh p.a)",
+        "scheme_info": "Beneficiaries of doctors, lawyers, technical graduates from non-reserved classes who want to open their own clinic, laboratory, radiology clinic or office will be eligible to get 5% interest subsidy on loans up to Rs.10.00 lakh taken from the bank.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://gueedc.gujarat.gov.in/Interest-Help-Scheme-for-Graduate-Doctor-Lawyer-Technical-Graduate.html",
+        "start_date": "2022-07-10",
+        "last_date": "2022-09-09"
+    }
+},
+{
+    "model": "schemes.scheme",
+    "pk": 34,
+    "fields": {
+        "name": "Education Loan Scheme upto Rs. 10 lakh",
+        "scheme_info": "Any person from general category can take loan of upto Rs. 10 lakh at 4% interest for admission in self financed medical, engineering, pharmacy, nursing, architecture and other technical courses in college from GUEEDC. For this, annual income of the family of the applicant must not exceed Rs. 3 lakh p.a and he/ she must have secured at-least 60% in 11th and 12th class.",
+        "marital_status": "any",
+        "age": "any",
+        "link": "https://gueedc.gujarat.gov.in/education-scheme.html",
+        "start_date": "2022-10-02",
+        "last_date": "2022-12-13"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 1,
+    "fields": {
+        "scheme": 6,
+        "gender": "female"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 2,
+    "fields": {
+        "scheme": 1,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 3,
+    "fields": {
+        "scheme": 2,
+        "gender": "female"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 4,
+    "fields": {
+        "scheme": 3,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 5,
+    "fields": {
+        "scheme": 4,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 6,
+    "fields": {
+        "scheme": 5,
+        "gender": "female"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 7,
+    "fields": {
+        "scheme": 8,
+        "gender": "female"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 9,
+    "fields": {
+        "scheme": 9,
+        "gender": "female"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 10,
+    "fields": {
+        "scheme": 10,
+        "gender": "female"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 11,
+    "fields": {
+        "scheme": 17,
+        "gender": "female"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 12,
+    "fields": {
+        "scheme": 18,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 13,
+    "fields": {
+        "scheme": 19,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 14,
+    "fields": {
+        "scheme": 20,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 15,
+    "fields": {
+        "scheme": 22,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 16,
+    "fields": {
+        "scheme": 23,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 17,
+    "fields": {
+        "scheme": 24,
+        "gender": "female"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 18,
+    "fields": {
+        "scheme": 25,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 19,
+    "fields": {
+        "scheme": 26,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 20,
+    "fields": {
+        "scheme": 27,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 21,
+    "fields": {
+        "scheme": 28,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 22,
+    "fields": {
+        "scheme": 29,
+        "gender": "female"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 23,
+    "fields": {
+        "scheme": 30,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 24,
+    "fields": {
+        "scheme": 31,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 25,
+    "fields": {
+        "scheme": 32,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 26,
+    "fields": {
+        "scheme": 33,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.genders",
+    "pk": 27,
+    "fields": {
+        "scheme": 34,
+        "gender": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 1,
+    "fields": {
+        "scheme": 6,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 2,
+    "fields": {
+        "scheme": 17,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 3,
+    "fields": {
+        "scheme": 1,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 4,
+    "fields": {
+        "scheme": 2,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 5,
+    "fields": {
+        "scheme": 3,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 6,
+    "fields": {
+        "scheme": 4,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 7,
+    "fields": {
+        "scheme": 5,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 8,
+    "fields": {
+        "scheme": 8,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 10,
+    "fields": {
+        "scheme": 9,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 11,
+    "fields": {
+        "scheme": 10,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 12,
+    "fields": {
+        "scheme": 18,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 13,
+    "fields": {
+        "scheme": 18,
+        "income": "lower"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 14,
+    "fields": {
+        "scheme": 19,
+        "income": "lower"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 15,
+    "fields": {
+        "scheme": 19,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 16,
+    "fields": {
+        "scheme": 20,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 17,
+    "fields": {
+        "scheme": 20,
+        "income": "lower"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 18,
+    "fields": {
+        "scheme": 20,
+        "income": "middle"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 19,
+    "fields": {
+        "scheme": 21,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 20,
+    "fields": {
+        "scheme": 21,
+        "income": "lower"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 21,
+    "fields": {
+        "scheme": 21,
+        "income": "middle"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 22,
+    "fields": {
+        "scheme": 22,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 23,
+    "fields": {
+        "scheme": 23,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 24,
+    "fields": {
+        "scheme": 24,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 25,
+    "fields": {
+        "scheme": 25,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 26,
+    "fields": {
+        "scheme": 26,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 27,
+    "fields": {
+        "scheme": 27,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 28,
+    "fields": {
+        "scheme": 28,
+        "income": "upper"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 29,
+    "fields": {
+        "scheme": 29,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 30,
+    "fields": {
+        "scheme": 30,
+        "income": "any"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 31,
+    "fields": {
+        "scheme": 31,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 32,
+    "fields": {
+        "scheme": 31,
+        "income": "lower"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 33,
+    "fields": {
+        "scheme": 31,
+        "income": "middle"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 34,
+    "fields": {
+        "scheme": 32,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 35,
+    "fields": {
+        "scheme": 32,
+        "income": "lower"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 36,
+    "fields": {
+        "scheme": 32,
+        "income": "middle"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 37,
+    "fields": {
+        "scheme": 33,
+        "income": "middle"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 38,
+    "fields": {
+        "scheme": 33,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 39,
+    "fields": {
+        "scheme": 33,
+        "income": "lower"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 40,
+    "fields": {
+        "scheme": 34,
+        "income": "BPL"
+    }
+},
+{
+    "model": "schemes.incomes",
+    "pk": 41,
+    "fields": {
+        "scheme": 34,
+        "income": "lower"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 1,
+    "fields": {
+        "scheme": 30,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 3,
+    "fields": {
+        "scheme": 29,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 4,
+    "fields": {
+        "scheme": 18,
+        "education": "senior_secondary"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 5,
+    "fields": {
+        "scheme": 20,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 6,
+    "fields": {
+        "scheme": 28,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 7,
+    "fields": {
+        "scheme": 1,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 8,
+    "fields": {
+        "scheme": 2,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 9,
+    "fields": {
+        "scheme": 3,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 10,
+    "fields": {
+        "scheme": 4,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 11,
+    "fields": {
+        "scheme": 5,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 12,
+    "fields": {
+        "scheme": 6,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 13,
+    "fields": {
+        "scheme": 8,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 15,
+    "fields": {
+        "scheme": 9,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 16,
+    "fields": {
+        "scheme": 10,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 17,
+    "fields": {
+        "scheme": 17,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 18,
+    "fields": {
+        "scheme": 19,
+        "education": "secondary"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 19,
+    "fields": {
+        "scheme": 21,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 20,
+    "fields": {
+        "scheme": 22,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 21,
+    "fields": {
+        "scheme": 23,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 22,
+    "fields": {
+        "scheme": 24,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 23,
+    "fields": {
+        "scheme": 25,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 24,
+    "fields": {
+        "scheme": 26,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 25,
+    "fields": {
+        "scheme": 27,
+        "education": "any"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 26,
+    "fields": {
+        "scheme": 31,
+        "education": "secondary"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 27,
+    "fields": {
+        "scheme": 32,
+        "education": "senior_secondary"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 28,
+    "fields": {
+        "scheme": 33,
+        "education": "postgraduate"
+    }
+},
+{
+    "model": "schemes.educations",
+    "pk": 29,
+    "fields": {
+        "scheme": 34,
+        "education": "senior_secondary"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 1,
+    "fields": {
+        "scheme": 1,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 2,
+    "fields": {
+        "scheme": 2,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 3,
+    "fields": {
+        "scheme": 3,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 4,
+    "fields": {
+        "scheme": 4,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 5,
+    "fields": {
+        "scheme": 5,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 6,
+    "fields": {
+        "scheme": 6,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 7,
+    "fields": {
+        "scheme": 8,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 9,
+    "fields": {
+        "scheme": 9,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 10,
+    "fields": {
+        "scheme": 10,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 11,
+    "fields": {
+        "scheme": 17,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 12,
+    "fields": {
+        "scheme": 18,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 13,
+    "fields": {
+        "scheme": 19,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 14,
+    "fields": {
+        "scheme": 20,
+        "caste": "general"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 15,
+    "fields": {
+        "scheme": 21,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 16,
+    "fields": {
+        "scheme": 22,
+        "caste": "general"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 17,
+    "fields": {
+        "scheme": 22,
+        "caste": "OBC"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 18,
+    "fields": {
+        "scheme": 23,
+        "caste": "ST"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 19,
+    "fields": {
+        "scheme": 24,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 20,
+    "fields": {
+        "scheme": 25,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 21,
+    "fields": {
+        "scheme": 26,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 22,
+    "fields": {
+        "scheme": 27,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 23,
+    "fields": {
+        "scheme": 28,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 24,
+    "fields": {
+        "scheme": 29,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 25,
+    "fields": {
+        "scheme": 30,
+        "caste": "any"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 26,
+    "fields": {
+        "scheme": 31,
+        "caste": "general"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 27,
+    "fields": {
+        "scheme": 32,
+        "caste": "general"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 28,
+    "fields": {
+        "scheme": 33,
+        "caste": "general"
+    }
+},
+{
+    "model": "schemes.castes",
+    "pk": 29,
+    "fields": {
+        "scheme": 34,
+        "caste": "general"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 1,
+    "fields": {
+        "scheme": 34,
+        "catagory": "education"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 2,
+    "fields": {
+        "scheme": 32,
+        "catagory": "education"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 3,
+    "fields": {
+        "scheme": 31,
+        "catagory": "education"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 4,
+    "fields": {
+        "scheme": 30,
+        "catagory": "startup"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 5,
+    "fields": {
+        "scheme": 2,
+        "catagory": "education"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 6,
+    "fields": {
+        "scheme": 3,
+        "catagory": "startup"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 7,
+    "fields": {
+        "scheme": 5,
+        "catagory": "education"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 8,
+    "fields": {
+        "scheme": 8,
+        "catagory": "startup"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 9,
+    "fields": {
+        "scheme": 17,
+        "catagory": "education"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 10,
+    "fields": {
+        "scheme": 18,
+        "catagory": "education"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 11,
+    "fields": {
+        "scheme": 21,
+        "catagory": "startup"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 12,
+    "fields": {
+        "scheme": 22,
+        "catagory": "agriculture"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 13,
+    "fields": {
+        "scheme": 23,
+        "catagory": "agriculture"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 14,
+    "fields": {
+        "scheme": 24,
+        "catagory": "agriculture"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 15,
+    "fields": {
+        "scheme": 25,
+        "catagory": "agriculture"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 16,
+    "fields": {
+        "scheme": 26,
+        "catagory": "agriculture"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 17,
+    "fields": {
+        "scheme": 27,
+        "catagory": "agriculture"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 18,
+    "fields": {
+        "scheme": 29,
+        "catagory": "other"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 19,
+    "fields": {
+        "scheme": 28,
+        "catagory": "agriculture"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 20,
+    "fields": {
+        "scheme": 20,
+        "catagory": "other"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 21,
+    "fields": {
+        "scheme": 19,
+        "catagory": "education"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 22,
+    "fields": {
+        "scheme": 4,
+        "catagory": "other"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 23,
+    "fields": {
+        "scheme": 1,
+        "catagory": "other"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 24,
+    "fields": {
+        "scheme": 6,
+        "catagory": "other"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 25,
+    "fields": {
+        "scheme": 33,
+        "catagory": "education"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 26,
+    "fields": {
+        "scheme": 9,
+        "catagory": "other"
+    }
+},
+{
+    "model": "schemes.catagories",
+    "pk": 27,
+    "fields": {
+        "scheme": 10,
+        "catagory": "other"
+    }
+}
+]
